@@ -15,6 +15,7 @@ import { LeadCaptureSection } from "@/components/lead-capture-section"
 import { FinalCtaSection } from "@/components/final-cta-section"
 import { SiteFooter } from "@/components/site-footer"
 import { LeadModal } from "@/components/lead-modal"
+import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -34,21 +35,43 @@ export default function Home() {
         <HeroSection onStartProject={openModal} onExploreServices={scrollToServices} />
 
         {/* Funky collage quotes marquee banner */}
-        <CollageQuotesBanner />
+        <ScrollReveal>
+          <CollageQuotesBanner />
+        </ScrollReveal>
 
-        <StudentExperienceSection />
-        <ServicesSection />
-        <ProcessSection />
-        <WhyChooseUsSection />
+        <ScrollReveal>
+          <StudentExperienceSection />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <ServicesSection />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <ProcessSection />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <WhyChooseUsSection />
+        </ScrollReveal>
 
         {/* Funky quotes banner between sections */}
-        <CollageQuotesBanner />
+        <ScrollReveal>
+          <CollageQuotesBanner />
+        </ScrollReveal>
 
         {/* Eryon AI feature section */}
-        <EryonAiSection />
+        <ScrollReveal>
+          <EryonAiSection />
+        </ScrollReveal>
 
-        <LeadCaptureSection />
-        <FinalCtaSection onStartProject={openModal} />
+        <ScrollReveal>
+          <LeadCaptureSection />
+        </ScrollReveal>
+        
+        <ScrollReveal>
+          <FinalCtaSection onStartProject={openModal} />
+        </ScrollReveal>
       </main>
 
       <SiteFooter />

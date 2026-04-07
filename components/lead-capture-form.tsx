@@ -64,11 +64,27 @@ export function LeadCaptureForm({ onSuccess, compact = false }: LeadCaptureFormP
     e.preventDefault()
     if (!validate()) return
     setSubmitting(true)
-    // Simulate API call
-    await new Promise((r) => setTimeout(r, 1500))
-    setSubmitting(false)
-    setSubmitted(true)
-    onSuccess?.()
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit');
+      }
+
+      setSubmitted(true)
+      onSuccess?.()
+    } catch (error) {
+      console.error(error)
+      // Ideally show a toast, but using alert since there isn't a toast setup imported here directly, wait there is sonner in package.json. Let's just fallback to a generic error state or alert if simple.
+      alert("Failed to submit the form. Please try again or email us directly at connect@eryonai.com");
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const field = (
