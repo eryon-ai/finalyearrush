@@ -83,7 +83,7 @@ export function CollageQuotesBanner() {
       {/* Section label */}
       <div className="text-center mt-4">
         <span className="sticker text-[#F2613F] bg-[#FEE3D4] px-4 py-1.5 rounded-full text-xs font-bold tracking-widest border border-[#F2613F]/30 uppercase">
-          🎓 Back to Collage — Made Stress-Free
+          🎓 Final Year Rush — Made Stress-Free
         </span>
       </div>
     </section>

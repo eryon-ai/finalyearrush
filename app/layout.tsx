@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'FinalYearRush by Eryon AI helps final-year students build, document, and deliver their academic projects with confidence. From idea to execution — get expert guidance, documentation, and deployment support.',
   keywords: ['final year project', 'student project help', 'project documentation', 'FinalYearRush', 'Eryon AI', 'academic project assistance'],
   authors: [{ name: 'Eryon AI' }],
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: 'FinalYearRush — Final Year Project Assistance',
     description: 'From idea to execution — we help you build, document, and deliver your project with confidence.',

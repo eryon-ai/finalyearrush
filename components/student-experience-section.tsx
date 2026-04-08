@@ -56,7 +56,7 @@ export function StudentExperienceSection() {
             className="text-3xl sm:text-4xl font-bold text-foreground text-balance mb-4"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
-            Back to College Days —{" "}
+            Final Year Rush —{" "}
             <span className="gradient-text">Without the Stress</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">

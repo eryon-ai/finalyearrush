@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -40,18 +41,14 @@ export function Navbar({ onStartProject }: NavbarProps) {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1 group" aria-label="FinalYearRush Home">
-          <span
-            className="font-extrabold text-xl tracking-tight"
-            style={{
-              fontFamily: "var(--font-plus-jakarta)",
-              background: "linear-gradient(135deg, #F2613F 0%, #F5A623 60%, #0FA3B1 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            FinalYear<span style={{ WebkitTextFillColor: "#2D1B0E", fontStyle: "italic" }}>Rush</span>
-          </span>
+          <Image 
+            src="/logo.png" 
+            alt="FinalYearRush Logo" 
+            width={160} 
+            height={40} 
+            className="h-10 w-auto" 
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}

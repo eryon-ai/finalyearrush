@@ -91,7 +91,7 @@ export function EryonAiSection() {
             <span className="gradient-text">Your Success</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            BackToCollage is supercharged by{" "}
+            FinalYearRush is supercharged by{" "}
             <strong className="text-[#F2613F]">Eryon AI</strong> — India&apos;s most student-friendly AI platform
             built to help you go from &quot;I have no idea&quot; to &quot;submission ready&quot; in record time.
           </p>
